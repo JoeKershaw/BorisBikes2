@@ -2,6 +2,19 @@ require "docking_station"
 
 
 RSpec.describe DockingStation do
+  subject { DockingStation.new(capacity) }
+  let(:capacity) {DockingStation::DEFAULT_CAPACITY}
+  describe "#initialize" do
+    let(:capacity) { 2 }
+    it 'allows user to give a capacity value' do
+      expect(subject.capacity).to eq 2
+    end
+  end
+  describe "#initialize" do
+    it 'DEFAULT_CAPACITY = 20 when no value given' do
+      expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+    end
+  end
   describe "#release_bike" do
     # it {is_expected.to respond_to :release_bike}
     it "dock responds to release bike" do
