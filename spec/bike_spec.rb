@@ -1,5 +1,12 @@
 require "bike"
 
 describe Bike do
-  it {is_expected.to respond_to :working?}
+  describe "#report" do
+    it "bike is broken" do
+      expect(subject.report).to eq !:working?
+    end
+  end
 end
+
+
+

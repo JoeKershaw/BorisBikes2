@@ -33,3 +33,39 @@ So that I can plan the distribution of bikes,
 I want a docking station to have a default capacity of 20 bikes.
 
 DOCKING STATION > attribute has bikes 20 bikes
+
+
+
+### New feature
+
+```
+As a member of the public,
+So that I reduce the chance of getting a broken bike in future,
+I'd like to report a bike as broken when I return it.
+
+OBJECT:
+BIKE -----> broken?
+
+
+As a maintainer of the system,
+So that I can manage broken bikes and not disappoint users,
+I'd like docking stations not to release broken bikes.
+
+
+DOCKING STATION -----> release good bike only
+
+As a maintainer of the system,
+So that I can manage broken bikes and not disappoint users,
+I'd like docking stations to accept returning bikes (broken or not).
+
+DOCKING STATION -----> accept ALALLALLALL
+
+
+```
+
+
+
+
+
+
+

@@ -12,14 +12,9 @@ class DockingStation
   def release_bike
     fail "Error: No bike" if empty?
     # TODO: try with unless to see if it's empty
-    @bike_collection.pop
-
-    # # if @bikes_docked > 0
-    # #   @bikes_docked -= 1
-    #   bike = Bike.new
-    # # else
-    # #   "There are no bikes"
-    # # end
+    bike = @bike_collection.pop
+    fail "Error: Broken Bike" if !bike.working?
+    bike
   end
 
   def dock(bike)
@@ -27,12 +22,11 @@ class DockingStation
     @bike_collection.push(bike)
     # if @bikes_docked < @capacity
     #   @bikes_docked += 1
-      "Bike docked!"
+    "Bike docked!"
     # else
     #   "Find another docking station!"
     # end
-    # if dockingstation holds a  @bike already then throw error message saying it's full
-    # otherwise allow the bike to be docked
+
   end
   private
   def full?
