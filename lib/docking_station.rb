@@ -20,14 +20,9 @@ class DockingStation
   def dock(bike)
     fail "Error: Bike already in place" if full?
     @bike_collection.push(bike)
-    # if @bikes_docked < @capacity
-    #   @bikes_docked += 1
     "Bike docked!"
-    # else
-    #   "Find another docking station!"
-    # end
-
   end
+
   private
   def full?
     @bike_collection.length >= DEFAULT_CAPACITY
